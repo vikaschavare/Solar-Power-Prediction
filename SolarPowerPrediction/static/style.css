@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fb;
+    color: #172033;
+}
+
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: #071b35;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.nav-links a:hover {
+    color: #ffd54a;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071b35,
+            #0b4770
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+}
+
+
+.hero-content {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.hero-text {
+    max-width: 650px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    background: #fff3b0;
+    color: #7a5700;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 span {
+    color: #ffd54a;
+}
+
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #d8e8f5;
+
+    margin-bottom: 30px;
+}
+
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #ffd54a;
+    color: #18243a;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.hero-button:hover {
+    background: white;
+}
+
+
+/* Solar Animation */
+
+.solar-animation {
+    width: 380px;
+    height: 330px;
+
+    position: relative;
+}
+
+
+.sun {
+    position: absolute;
+
+    top: 20px;
+    right: 70px;
+
+    font-size: 110px;
+
+    color: #ffd54a;
+
+    text-shadow: 0 0 40px #ffd54a;
+}
+
+
+.solar-panel {
+    position: absolute;
+
+    bottom: 20px;
+    left: 30px;
+
+    width: 300px;
+    height: 160px;
+
+    transform: skewY(-8deg);
+
+    border: 8px solid #b5c9d9;
+
+    background: #153e68;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.solar-panel div {
+    border: 1px solid #75a9cc;
+}
+
+
+/* Prediction Section */
+
+.prediction-section {
+    padding: 80px 8%;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading span {
+    color: #0a7d5a;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.section-heading h2 {
+    font-size: 36px;
+
+    margin: 10px 0;
+}
+
+
+.section-heading p {
+    color: #6d7785;
+}
+
+
+/* Prediction Container */
+
+.prediction-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 30px;
+}
+
+
+.card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.input-card h3,
+.result-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+.input-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #39465a;
+}
+
+
+.form-group input {
+    padding: 13px 14px;
+
+    border: 1px solid #d5dce5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+.form-group input:focus {
+    border-color: #0a7d5a;
+
+    box-shadow:
+        0 0 0 3px rgba(10, 125, 90, 0.1);
+}
+
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+.predict-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #0a7d5a;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.predict-button:hover {
+    background: #075c43;
+}
+
+
+/* Result */
+
+.result-card {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.result-icon {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+
+.prediction-value {
+    font-size: 58px;
+
+    font-weight: bold;
+
+    color: #0a7d5a;
+
+    margin: 15px 0;
+}
+
+
+.prediction-value small {
+    font-size: 24px;
+
+    color: #536070;
+}
+
+
+.result-message {
+    color: #6d7785;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.result-details {
+    display: flex;
+
+    justify-content: space-around;
+
+    border-top: 1px solid #e5e9ee;
+
+    padding-top: 20px;
+
+    gap: 10px;
+}
+
+
+.result-details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.result-details strong {
+    font-size: 12px;
+
+    color: #657080;
+}
+
+
+.result-details span {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.empty-result {
+    padding: 30px;
+}
+
+
+.empty-icon {
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+
+.empty-result p {
+    color: #7a8491;
+
+    line-height: 1.6;
+}
+
+
+/* Performance */
+
+.performance {
+    padding: 70px 8%;
+
+    background: #edf5f1;
+}
+
+
+.stats-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.stat-card {
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.stat-icon {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+
+.stat-card h3 {
+    font-size: 27px;
+
+    color: #0a7d5a;
+
+    margin-bottom: 8px;
+}
+
+
+.stat-card p {
+    color: #697583;
+
+    font-size: 14px;
+}
+
+
+/* About */
+
+.about {
+    padding: 80px 8%;
+
+    background: white;
+}
+
+
+.about-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.about h2 {
+    font-size: 36px;
+
+    margin: 15px 0 20px;
+}
+
+
+.about p {
+    color: #687483;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+.technology-card {
+    background: #071b35;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+}
+
+
+.technology-card h3 {
+    margin-bottom: 20px;
+
+    color: #ffd54a;
+}
+
+
+.technology-card ul {
+    list-style: none;
+}
+
+
+.technology-card li {
+    padding: 9px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+/* Footer */
+
+footer {
+    background: #071b35;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+
+footer p {
+    color: #aebdca;
+
+    margin-top: 6px;
+
+    font-size: 14px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .prediction-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .solar-animation {
+        transform: scale(0.8);
+    }
+
+    .prediction-section,
+    .performance,
+    .about {
+        padding: 55px 5%;
+    }
+
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+}
